@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="calculator.css">
+    <title>calculator</title>
+</head>
+<body>
+    <div id="c"> 
+    <input type="text" id="show" readonly>
+    <div class="button-taken">
+    <button class="button" onclick="diplay = ''; document.querySelector('#show').value = diplay">AC</button>
+    <button class="button" onclick="diplay += 1; document.querySelector('#show').value = diplay">1</button>   
+    <button class="button" onclick="diplay += 2; document.querySelector('#show').value = diplay">2</button>   
+    <button class="button" onclick="diplay += `+`; document.querySelector('#show').value = diplay">+</button>      
+    <button class="button" onclick="diplay += 3; document.querySelector('#show').value = diplay">3</button>   
+    <button class="button" onclick="diplay += 4; document.querySelector('#show').value = diplay">4</button>   
+    <button class="button" onclick="diplay += `-`; document.querySelector('#show').value = diplay">-</button>   
+    <button class="button" onclick="diplay += 5; document.querySelector('#show').value = diplay">5</button>   
+    <button class="button" onclick="diplay += 6; document.querySelector('#show').value = diplay">6</button>   
+    <button class="button" onclick="diplay += `*`; document.querySelector('#show').value = diplay">*</button>   
+    <button class="button" onclick="diplay += 7; document.querySelector('#show').value = diplay">7</button>   
+    <button class="button" onclick="diplay += 8; document.querySelector('#show').value = diplay">8</button>   
+    <button class="button" onclick="diplay += `/`; document.querySelector('#show').value = diplay">/</button>   
+    <button class="button" onclick= "diplay = eval(diplay); document.querySelector('#show').value = diplay">=</button>   
+    <button class="button" onclick="diplay += 9; document.querySelector('#show').value = diplay">9</button>
+    <button class="button" onclick="display = document.querySelector('#show'); display.value = display.value.slice(0, -1);">⌫</button> 
+    <button class="button" onclick="diplay += 0; document.querySelector('#show').value = diplay">0</button>   
+    <button class="button" onclick="diplay += `.`; document.querySelector('#show').value = diplay">.</button>   
+    </div>
+    </div>
+    <script>
+    let diplay = '';
+    document.querySelector('#show').value = diplay; 
+    </script>
+</body>
+</html>
